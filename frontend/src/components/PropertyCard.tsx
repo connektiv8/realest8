@@ -1,4 +1,4 @@
-import { PropertyListItem } from '../types';
+import type { PropertyListItem } from '../types';
 import './PropertyCard.css';
 
 interface PropertyCardProps {

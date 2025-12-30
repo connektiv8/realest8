@@ -1,5 +1,5 @@
 import api from './api';
-import { Property, PropertyListItem } from '../types';
+import type { Property, PropertyListItem } from '../types';
 
 export const propertyService = {
   // Get all properties (public view)

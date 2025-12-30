@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { propertyService } from '../services/propertyService';
-import { PropertyListItem } from '../types';
+import type { PropertyListItem } from '../types';
 import PropertyCard from '../components/PropertyCard';
 import './Home.css';
 
