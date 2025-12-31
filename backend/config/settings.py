@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -83,8 +84,8 @@ DATABASES = {
         'NAME': 'realest8_db',
         'USER': 'realest8_user',
         'PASSWORD': 'realest8_password',
-        'HOST': 'localhost',
-        'PORT': '5432',
+        'HOST': os.environ.get('DATABASE_HOST', 'localhost'),
+        'PORT': '5432' if os.environ.get('DATABASE_HOST') == 'db' else '5556',
     }
 }
 
@@ -148,7 +149,7 @@ REST_FRAMEWORK = {
 # CORS settings for React frontend
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',
-    'http://localhost:5173',
+    'http://localhost:5111',
 ]
 
 # Media files

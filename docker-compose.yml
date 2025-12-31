@@ -6,17 +6,17 @@ services:
       POSTGRES_USER: realest8_user
       POSTGRES_PASSWORD: realest8_password
     ports:
-      - "5432:5432"
+      - "5556:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
   backend:
     build: ./backend
-    command: python manage.py runserver 0.0.0.0:8000
+    command: python manage.py runserver 0.0.0.0:8889
     volumes:
       - ./backend:/app
     ports:
-      - "8000:8000"
+      - "8889:8889"
     depends_on:
       - db
     environment:
@@ -29,7 +29,7 @@ services:
       - ./frontend:/app
       - /app/node_modules
     ports:
-      - "5173:5173"
+      - "5111:5111"
     depends_on:
       - backend
 
