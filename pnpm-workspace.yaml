@@ -1,0 +1,6 @@
+packages:
+  - 'backend'
+  - 'portal'
+  - 'website'
+allowBuilds:
+  esbuild: true

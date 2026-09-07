@@ -1,0 +1,25 @@
+{
+  "name": "realest8",
+  "private": true,
+  "engines": {
+    "node": "26.8.1",
+    "pnpm": "12.3.4"
+  },
+  "packageManager": "pnpm@12.3.4",
+  "scripts": {
+    "dev": "concurrently --names API,PORTAL --prefix-colors cyan,magenta \"pnpm --filter realest8-backend dev\" \"pnpm --filter realest8-portal dev\"",
+    "dev:api": "pnpm --filter realest8-backend dev",
+    "dev:portal": "pnpm --filter realest8-portal dev",
+    "dev:website": "pnpm --filter @realest8/website dev",
+    "build": "pnpm --filter realest8-backend build && pnpm --filter realest8-portal build",
+    "build:website": "pnpm --filter @realest8/website build",
+    "typecheck": "pnpm -r typecheck",
+    "lint": "pnpm -r lint",
+    "db:generate": "pnpm --filter realest8-backend db:generate",
+    "db:migrate": "pnpm --filter realest8-backend db:migrate",
+    "db:studio": "pnpm --filter realest8-backend db:studio"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

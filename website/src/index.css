@@ -1,0 +1,11 @@
+@import "tailwindcss";
+@plugin "daisyui";
+@plugin "@tailwindcss/typography";
+
+/* No custom brand theme defined yet — using DaisyUI's stock light/dark
+   themes until a Realest8 palette is decided (see connektiv8/website's
+   index.css for the pattern to follow once one exists). */
+
+html {
+  scroll-behavior: smooth;
+}

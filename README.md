@@ -1,4 +1,4 @@
-# RealEst8 - Real Estate Listing Platform
+# Realest8 - Real Estate Listing Platform
 
 A modern real estate listing platform for properties under $200k or available on vendor terms, featuring a flat-rate $1,000 commission structure and a vendor self-service portal.
 

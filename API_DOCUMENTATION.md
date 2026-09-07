@@ -1,4 +1,4 @@
-# RealEst8 API Documentation
+# Realest8 API Documentation
 
 ## Base URL
 ```
@@ -285,7 +285,7 @@ Content-Type: multipart/form-data
 
 ## Commission Structure
 
-All properties listed on RealEst8 have a **flat-rate commission of $1,000** per sale.
+All properties listed on Realest8 have a **flat-rate commission of $1,000** per sale.
 
 - Commission records are automatically created when a property is listed
 - The commission amount is always $1,000 (cannot be modified)

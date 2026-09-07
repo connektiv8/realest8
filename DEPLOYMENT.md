@@ -1,4 +1,4 @@
-# RealEst8 Deployment Guide
+# Realest8 Deployment Guide
 
 ## Prerequisites
 

@@ -1,0 +1,18 @@
+FROM node:26.8.1-alpine
+
+WORKDIR /app
+
+# See Dockerfile.api for why this replaces `corepack enable`.
+RUN npm install -g --allow-scripts=pnpm pnpm@12.3.4
+
+COPY pnpm-workspace.yaml pnpm-lock.yaml package.json ./
+COPY website/package.json ./website/
+RUN pnpm install --frozen-lockfile
+
+COPY website ./website
+
+WORKDIR /app/website
+
+EXPOSE 5173
+
+CMD ["pnpm", "run", "dev"]

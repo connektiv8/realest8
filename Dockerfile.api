@@ -1,0 +1,22 @@
+FROM node:26.8.1-alpine
+
+WORKDIR /app
+
+# corepack is no longer bundled with this Node image — npm itself is always
+# present, and `npm install -g pnpm@<version>` is pnpm's own original
+# installation method that predates corepack entirely. --allow-scripts=pnpm
+# lets pnpm's install/postinstall scripts run under npm's newer default
+# security posture. Same fix as ginkyai-core's Dockerfile.api (GIN-102).
+RUN npm install -g --allow-scripts=pnpm pnpm@12.3.4
+
+COPY pnpm-workspace.yaml pnpm-lock.yaml package.json ./
+COPY backend/package.json ./backend/
+RUN pnpm install --frozen-lockfile
+
+COPY backend ./backend
+
+WORKDIR /app/backend
+
+EXPOSE 8889
+
+CMD ["pnpm", "run", "dev:docker"]

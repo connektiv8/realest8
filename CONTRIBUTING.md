@@ -1,6 +1,6 @@
-# Contributing to RealEst8
+# Contributing to Realest8
 
-Thank you for your interest in contributing to RealEst8! This document provides guidelines for contributing to the project.
+Thank you for your interest in contributing to Realest8! This document provides guidelines for contributing to the project.
 
 ## Development Setup
 
